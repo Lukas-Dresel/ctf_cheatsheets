@@ -1,4 +1,7 @@
-# TO BUILD 
+# WHAT'S THIS
+Adds symbols to an ELF file. Sort of the opposite of strip.
+
+# TO SETUP 
 git clone https://github.com/wapiflapi/wsym
 
 
