@@ -9,3 +9,6 @@ afl-tmin -i /path/to/testcase -o /path/to/minimized/testcase [-Q] /path/to/binar
 
 # TIPS
     SEE afl-fuzz
+    - AFL_TMIN_EXACT=1 forces the path to match the one as the crash, this is useful because
+      otherwise it will consider all paths that still crash as the same behavior. If the program
+      heavily sanity checks its input and `abort()`s when incorrect this makes it unusable otherwise
