@@ -1,10 +1,22 @@
-xport AFL_PATH=/path/to/afl/root/dir
+# WHAT IS IT?
+AFL is a mutational genetic fuzzer with branch-tracking for coverage feedback.
+Always good to run first thing on challenge binaries, CPU is literally free!
+With QEMU mode should be usable on almost all challenge binaries that use stdin.
+
+# TO SETUP
+export AFL_PATH=/path/to/afl/root/dir
 Symptoms when missing:
     - can't find afl-qemu-trace
 
 export PATH=$PATH:$AFL_PATH
 
+
+# TO USE
 afl-tmin -i /path/to/testcase -o /path/to/minimized/testcase [-Q] /path/to/binary [<binary args>]
 
 afl-cmin -i /path/to/all/tests -o /nonexistent/path/to/dump/minimized/tests [-Q] /path/to/binary [<binary args>]
+
+# TIPS
+    - AFL_PRELOAD environment variable allows to LD_PRELOAD in the target binary! 
+      Use, e.g. with github.com/zardus/preeny.git' to fuzz network binaries or to patch out problematic stuff
 
