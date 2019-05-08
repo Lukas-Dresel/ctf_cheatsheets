@@ -1,0 +1,10 @@
+xport AFL_PATH=/path/to/afl/root/dir
+Symptoms when missing:
+    - can't find afl-qemu-trace
+
+export PATH=$PATH:$AFL_PATH
+
+afl-tmin -i /path/to/testcase -o /path/to/minimized/testcase [-Q] /path/to/binary [<binary args>]
+
+afl-cmin -i /path/to/all/tests -o /nonexistent/path/to/dump/minimized/tests [-Q] /path/to/binary [<binary args>]
+
