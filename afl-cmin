@@ -1,0 +1,13 @@
+# WHAT IS IT?
+afl-cmin takes a set of testcases and reduces them to a subset based on what AFL thinks is unique behavior.
+This helps with getting a minimal set of interesting testcases and lets you eliminate testcases independently found by
+multiple fuzzer instances.
+
+# TO SETUP
+SEE afl-fuzz
+
+# TO USE
+afl-cmin -i /path/to/all/tests -o /nonexistent/path/to/dump/minimized/tests [-Q] /path/to/binary [<binary args>]
+
+# TIPS
+    SEE afl-fuzz

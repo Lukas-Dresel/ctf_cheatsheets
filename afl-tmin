@@ -1,0 +1,11 @@
+# WHAT IS IT?
+afl-tmin uses a bunch of heuristics to simplify testcases as much as it can to exhibit the same behavior as before
+# TO SETUP
+SEE afl-fuzz
+
+# TO USE
+afl-tmin -i /path/to/testcase -o /path/to/minimized/testcase [-Q] /path/to/binary [<binary args>]
+
+
+# TIPS
+    SEE afl-fuzz

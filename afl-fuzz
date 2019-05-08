@@ -12,9 +12,7 @@ export PATH=$PATH:$AFL_PATH
 
 
 # TO USE
-afl-tmin -i /path/to/testcase -o /path/to/minimized/testcase [-Q] /path/to/binary [<binary args>]
-
-afl-cmin -i /path/to/all/tests -o /nonexistent/path/to/dump/minimized/tests [-Q] /path/to/binary [<binary args>]
+afl-fuzz -i /path/to/starting/seeds -o /path/to/sync/directory [-Q] /path/to/binary [<binary args>]
 
 # TIPS
     - AFL_PRELOAD environment variable allows to LD_PRELOAD in the target binary! 
