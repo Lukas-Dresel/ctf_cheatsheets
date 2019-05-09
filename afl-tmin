@@ -1,0 +1,14 @@
+# WHAT IS IT?
+afl-tmin uses a bunch of heuristics to simplify testcases as much as it can to exhibit the same behavior as before
+# TO SETUP
+SEE afl-fuzz
+
+# TO USE
+afl-tmin -i /path/to/testcase -o /path/to/minimized/testcase [-Q] /path/to/binary [<binary args>]
+
+
+# TIPS
+    SEE afl-fuzz
+    - AFL_TMIN_EXACT=1 forces the path to match the one as the crash, this is useful because
+      otherwise it will consider all paths that still crash as the same behavior. If the program
+      heavily sanity checks its input and `abort()`s when incorrect this makes it unusable otherwise
